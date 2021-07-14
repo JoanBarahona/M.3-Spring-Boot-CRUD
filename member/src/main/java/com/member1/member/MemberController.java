@@ -18,7 +18,7 @@ public class MemberController {
 	MemberRepository memberRepository;
 	
 	@RequestMapping("/allMembers")
-	public String getAllMembers(Model boxtoView) {
+	public String getAllMembers(Model boxToView) {
 		
 		boxToView.addAttribute("memberListfromControllerAndDB", memberRepository.findAll());
 		
@@ -78,7 +78,7 @@ public class MemberController {
 	@RequestMapping("/updateMember")
 	public String updateMember(int id, Model model) {
 		
-		Optional<Member> meberFound = findOneMemberById(id);
+		Optional<Member> memberFound = findOneMemberById(id);
 		
 		if (memberFound.isPresent()) {
 			
