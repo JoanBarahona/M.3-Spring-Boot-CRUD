@@ -87,7 +87,7 @@ public class MemberController {
 		}
 		
 		else
-			return "notfoun.html";
+			return "notfound.html";
 	}
 	
 	@PostMapping("/replaceMember/{idFromView}")

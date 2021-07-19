@@ -13,7 +13,8 @@ body {
 
 .topnav {
 	overflow: hidden;
-	background-color: #333;	
+	background-color: #333;
+	
 }
 
 .topnav a {
@@ -78,6 +79,7 @@ body {
 }
 </style>
 
+
 <head>
 
 <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE"></title>
@@ -87,16 +89,16 @@ body {
 
 	<!-- Main Navigation -->
 	
+
 		<div class="topnav" id="myTopnav">
 			<a class="active" th:href="@{/home/}">Spring Boot Project</a>
-			<a th:href="@{/member/allMembers}">All members</a>
-			<a th:href="@{/member/newMember}">Add new member</a>
+			<a th:href="@{/member/allMemebers}">All members</a>
+			<a th:href="@{/member/newMemeber}">Add new member</a>
 			<a th:href="@{/fillin}">Fill in</a>
 			
-			<a th:href="@{/book/allBooks}">All books</a>
-			<a th:href="@{/book/newBook}">Add new book</a>
-			<a	onclick="document.getElementById('id01').style.display='block'"
-				class="w3-bar-item w3-button w3-mobile w3-right">Log in</a>
+			<a th:href="@{/book/allBooks}">All expenses</a>
+			<a th:href="@{/book/newBook}">Add new expense</a>
+			
 			<a	onclick="document.getElementById('id02').style.display='block'"
 				class="w3-bar-item w3-button w3-mobile w3-right">Session</a> 
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -115,50 +117,10 @@ body {
 		</script>
 
 
-		<!-- Login form -->
-		<div id="id01" class="w3-modal">
-			<div class="w3-modal-content w3-card-4 w3-animate-zoom"
-				style="max-width: 600px">
 
-				<!-- Login form Image Header -->
-				<div class="w3-center">
-					<Br> <span
-						onclick="document.getElementById('id01').style.display='none'"
-						class="w3-button w3-xlarge w3-transparent w3-display-topright"
-						title="Close Modal">x</span>
-						
-						<img th:src="@{/avatars/img_avatar.jpg}"
-						alt="Avatar" style="width: 30%" class="w3-circle w3-margin-top">
-				</div>
 
-				<!-- Login form Body Username&Password -->
-				<form class="w3-container" action="login">
-					<div class="w3-section">
-						<label><b>Username</b></label> <input
-							class="w3-input w3-border w3-margin-bottom" type="text"
-							placeholder="Enter Username" name="usrname" required> <label>
-							<b>Password</b>
-						</label> <input class="w3-input w3-border" type="text"
-							placeholder="Enter Password" name="psw" required>
-						<button class="w3-button w3-block w3-green w3-section w3-padding"
-							type="submit">Login</button>
-						<input class="w3-check w3-margin-top" type="checkbox"
-							checked="checked"> Remember me
-					</div>
-				</form>
 
-				<!-- Login form footer Forgot Password-->
-				<div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-					<button
-						onclick="document.getElementById('id01').style.display='none'"
-						type="button" class="w3-button w3-red">Cancel</button>
-					<span class="w3-right w3-padding w3-hide-small">Forgot <a
-						href="#">password?</a></span>
-				</div>
-
-			</div>
-		</div>
-
+	
 
 		<!-- Cart info -->
 		<div id="id02" class="w3-modal">
@@ -167,8 +129,8 @@ body {
 					<span
 						onclick="document.getElementById('id02').style.display='none'"
 						class="w3-button w3-display-topright">&times;</span>
-					<p>Your id session is: 12345</p>
-					<p>Your name is: Admin Cifo</p>
+					<p>Your id session is: 15611354BGET5GG</p>
+					<p>Your name is: Alan Smith</p>
 					<p>Status: CREATED</p>
 				</div>
 			</div>
@@ -185,7 +147,7 @@ body {
 	<!-- Footer -->
 	<footer>
 		<div class="footer">
-			<p>2021 Java Spring with Layout Thymeleaf. All rights reserved.</p>
+			<p>2020 Java Spring with Layout Thymeleaf. All rights reserved.</p>
 		</div>
 	</footer>
 
