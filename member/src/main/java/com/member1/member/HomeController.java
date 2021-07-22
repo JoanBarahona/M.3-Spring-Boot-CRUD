@@ -116,7 +116,7 @@ public class HomeController {
 				/*
 				 * boolean randomPublished; if ((intRandom % 2) == 0) { randomPublished = true;
 				 * } else { randomPublished = false; }
-				 */
+				 *///
 
 				bookRepository.save(new Book(faker.name().name(), faker.book().title(),
 						faker.number().randomNumber() ));
