@@ -17,52 +17,67 @@ public class Book {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	private String name;
+	private String author;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date date;
 	private double value;
 	
-		
+	
+	
 	public Book() {
 		super();
 	}
-	public Book(int id, String name, Date date, double value) {
+	
+	public Book(int id, String author, Date date, double value) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.author = author;
 		this.date = date;
 		this.value = value;
 	}
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+
+	public String getAuthor() {
+		return author;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setAuthor(String author) {
+		this.author = author;
 	}
-	public double getValue() {
-		return value;
-	}
-	public void setValue(double value) {
-		this.value = value;
-	}
-	
-	
+
 	public Date getDate() {
 		return date;
 	}
+
 	public void setDate(Date date) {
 		this.date = date;
 	}
+
+	public double getValue() {
+		return value;
+	}
+
+	public void setValue(double value) {
+		this.value = value;
+	}
+
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", name=" + name + ", date=" + date + ", value=" + value + "]";
+		return "Book [id=" + id + ", author=" + author + ", date=" + date + ", value=" + value + "]";
 	}
-	
 
+
+	
+	
+	
+	
+		
+	
 }

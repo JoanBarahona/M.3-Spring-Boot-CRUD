@@ -19,31 +19,30 @@
 
 	<div layout:fragment="content">
 
-
 <div class="w3-container w3-card-4 w3-display-middle w3-center"
 	style="width: 50%;">
 
-	<p>How many members do you want to create?</p>
+	<p>How many books do you want to create?</p>
 
-	<a th:href="@{/fillinmember(qtyToCreate=10)}"
-		class="w3-button w3-teal">Create 10 members</a>
+	<a th:href="@{/fillinbook(qtyToCreate=10)}"
+		class="w3-button w3-teal">Create 10 books</a>
 	<p></p>
-	<a th:href="@{/fillinmember(qtyToCreate=100)}"
-		class="w3-button w3-teal">Create 100 members</a>
+	<a th:href="@{/fillinbook(qtyToCreate=100)}"
+		class="w3-button w3-teal">Create 100 books</a>
 	<p></p>
-	<a th:href="@{/fillinmember(qtyToCreate=1000)}"
-		class="w3-button w3-teal">Create 1000 members</a>
+	<a th:href="@{/fillinbook(qtyToCreate=1000)}"
+		class="w3-button w3-teal">Create 1000 books</a>
 	<p></p>
-	<a th:href="@{/fillinmember(qtyToCreate=5000)}"
-		class="w3-button w3-teal">Create 5000 members</a>
+	<a th:href="@{/fillinbook(qtyToCreate=5000)}"
+		class="w3-button w3-teal">Create 5000 books</a>
 	<p></p>
-	<a th:href="@{/fillinmember(qtyToCreate=10000)}"
-		class="w3-button w3-teal">Create 10000 members</a>
+	<a th:href="@{/fillinbook(qtyToCreate=10000)}"
+		class="w3-button w3-teal">Create 10000 books</a>
 
-	<p>Delete all members</p>
+	<p>Delete all books</p>
 
-	<a th:href="@{/member/deleteAllMember}" class="w3-button w3-red">Delete
-		all members</a>
+	<a th:href="@{/book/deleteAllBook}" class="w3-button w3-red">Delete
+		all books</a>
 	<p></p>
 	<p></p>
 

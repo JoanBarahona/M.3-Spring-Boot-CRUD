@@ -66,8 +66,8 @@ public class HomeController {
 			 */
 
 			memberRepository.save(new Member(faker.name().firstName(), faker.name().lastName(),
-					faker.number().numberBetween(16, 65), faker.name().firstName() + "@java.com",
-					faker.number().randomDouble(2, 5, 2000),
+					faker.name().firstName() + "@java.com",
+					
 					String.valueOf((intRandom + 5) * (count+1)* 6) + stringRandom1 + stringRandom2 + stringRandom3));
 
 			count++;
@@ -75,6 +75,57 @@ public class HomeController {
 
 		return "redirect:/member/allMembers";
 	}
+	
+	
+	//-------------------- fill in book our DB ---------------------------------------
+		@RequestMapping({ "/fillin" })
+		public String finInDB() {
+
+			return "fillinbook.html";
+		}
+
+		@RequestMapping({ "/fillinbook" })
+		public String fillInDBBook(int qtyToCreate) {
+
+			String alphabetChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!·$%&/()=?¿?=)()/*-+^*Ç¨_:;;:_+/+/";
+
+			// int i = 0;
+			char stringRandom1, stringRandom2, stringRandom3;
+			/*
+			 * while (i < 10) { char charRandom =
+			 * alphabetChars.charAt(createIntRandom(alphabetChars.length())); stringRandom *
+			 * += stringRandom + charRandom;
+			 * 
+			 * }
+			 */
+
+			Faker faker = new Faker();
+			Random rand = new Random();
+			int max = 1525;
+			int count = 0;
+
+			while (count < qtyToCreate) {
+
+				stringRandom1 = alphabetChars.charAt(createIntRandom(alphabetChars.length()));
+				stringRandom2 = alphabetChars.charAt(createIntRandom(alphabetChars.length()));
+				stringRandom3 = alphabetChars.charAt(createIntRandom(alphabetChars.length()));
+				int intRandom = rand.nextInt(max);
+
+				/*
+				 * boolean randomPublished; if ((intRandom % 2) == 0) { randomPublished = true;
+				 * } else { randomPublished = false; }
+				 */
+
+				bookRepository.save(new Book(faker.name().firstName(), faker.name().lastName(),
+						faker.name().firstName() + "@java.com",
+						
+						String.valueOf((intRandom + 5) * (count+1)* 6) + stringRandom1 + stringRandom2 + stringRandom3));
+
+				count++;
+			}
+
+			return "redirect:/book/allBook";
+		}
 
 	//------ error path website ---------//
 	@RequestMapping({ "*", "*/*", "*/*/*" })

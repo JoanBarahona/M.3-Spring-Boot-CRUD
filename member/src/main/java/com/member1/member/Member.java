@@ -15,9 +15,7 @@ public class Member {
 	private int id;
 	public String name;
 	public String surname;
-	public int age;
 	public String email;
-	public double monthSalary;
 	public String password;
 	
 	//private List<Book> books;
@@ -28,14 +26,12 @@ public class Member {
 	
 	
 	
-	public Member(String name, String surname, int age, String email, double monthSalary,String password) {
+	public Member(String name, String surname, String email,String password) {
 		super();
 		
 		this.name = name;
 		this.surname = surname;
-		this.age = age;
 		this.email = email;
-		this.monthSalary = monthSalary;
 		this.password = password;
 	}
 	
@@ -66,29 +62,17 @@ public class Member {
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public double getMonthSalary() {
-		return monthSalary;
-	}
-	public void setMonthSalary(double monthSalary) {
-		this.monthSalary = monthSalary;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", name=" + name + ", surname=" + surname + ", age=" + age + ", email=" + email
-				+ ", monthSalary=" + monthSalary + "]\n";
+		return "Member [id=" + id + ", name=" + name + ", surname=" + surname + ", age=" + ", email=" + email + "]\n";
 	}
 	
 	

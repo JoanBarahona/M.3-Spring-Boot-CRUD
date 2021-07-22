@@ -105,8 +105,7 @@ public class MemberController {
 				 memberFound.get().setPassword(member.getPassword());
 			if (member.getEmail() != null)
 				 memberFound.get().setEmail(member.getEmail());
-			if (member.getAge() != 0.0)
-				memberFound.get().setMonthSalary(member.getMonthSalary());
+			
 			
 			memberRepository.save(memberFound.get());
 			return "redirect:/member/allMembers";

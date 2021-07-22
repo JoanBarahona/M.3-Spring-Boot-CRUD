@@ -11,6 +11,7 @@
 
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <head>
     <title>Welcome to our site</title>
     <style>
@@ -48,9 +49,7 @@
 				<td>id</td>
 				<td>name</td>
 				<td>surname</td>
-				<td>age</td>
 				<td>email</td>
-				<td>salary</td>
 				<td>password</td>
 				<td>actions</td>
 			</tr>
@@ -59,9 +58,7 @@
 				<td th:text="${member.id}"></td>
 				<td th:text="${member.name}"></td>
 				<td th:text="${member.surname}"></td>
-				<td th:text="${member.age}"></td>
-				<td th:text="${member.email}"></td>
-				<td th:text="${member.monthSalary}"></td>
+				<td th:text="${member.email}"></td>				
 				<td th:text="${member.password}"></td>
 
 				<td><a th:href="@{deleteMember(id=${member.id})}"
