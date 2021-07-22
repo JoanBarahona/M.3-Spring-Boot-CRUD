@@ -100,8 +100,8 @@ public class BookController {
 			
 			if (book.getAuthor() != null)
 				 bookFound.get().setAuthor(book.getAuthor());
-			if (book.getDate() != null)
-				 bookFound.get().setDate(book.getDate());
+			if (book.getTitle() != null)
+				 bookFound.get().setTitle(book.getTitle());
 			
 			
 			

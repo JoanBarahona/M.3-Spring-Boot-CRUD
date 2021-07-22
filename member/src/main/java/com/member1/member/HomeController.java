@@ -20,6 +20,8 @@ public class HomeController {
 	@Autowired
 	private MemberRepository memberRepository;
 	
+	private BookRepository bookRepository;
+	
 	//------------------------------home ---------------------------
 	@RequestMapping({ "/home", "/" })
 	public String home() {
@@ -78,8 +80,8 @@ public class HomeController {
 	
 	
 	//-------------------- fill in book our DB ---------------------------------------
-		@RequestMapping({ "/fillin" })
-		public String finInDB() {
+		@RequestMapping({ "/fillinbook" })
+		public String finInDB1() {
 
 			return "fillinbook.html";
 		}
@@ -116,10 +118,10 @@ public class HomeController {
 				 * } else { randomPublished = false; }
 				 */
 
-				bookRepository.save(new Book(faker.name().firstName(), faker.name().lastName(),
-						faker.name().firstName() + "@java.com",
+				bookRepository.save(new Book(faker.name().name(), faker.book().title(),
+						faker.number().randomNumber() ));
 						
-						String.valueOf((intRandom + 5) * (count+1)* 6) + stringRandom1 + stringRandom2 + stringRandom3));
+				//		String.valueOf( stringRandom1 + stringRandom2 + (intRandom + 5) * (count+1)* 6) 
 
 				count++;
 			}
