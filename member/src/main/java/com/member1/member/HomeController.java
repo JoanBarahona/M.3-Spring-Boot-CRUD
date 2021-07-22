@@ -4,9 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 import java.util.Random;
-import java.util.logging.Logger;
 
-import org.slf4j.LoggerFactory;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -86,7 +86,7 @@ public class HomeController {
 			return "fillinbook.html";
 		}
 
-		@RequestMapping({ "/fillinbook" })
+		@RequestMapping({ "/fillinbook2" })
 		public String fillInDBBook(int qtyToCreate) {
 
 			String alphabetChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!·$%&/()=?¿?=)()/*-+^*Ç¨_:;;:_+/+/";
