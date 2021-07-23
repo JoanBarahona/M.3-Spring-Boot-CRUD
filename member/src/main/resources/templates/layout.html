@@ -92,18 +92,22 @@ body {
 
 		<div class="topnav" id="myTopnav">
 			<a class="active" th:href="@{/home/}">Spring Boot Project</a>
-			<a th:href="@{/member/allMemebers}">All members</a>
-			<a th:href="@{/member/newMemeber}">Add new member</a>
+			<a th:href="@{/member/allMembers}">All members</a>
+			<a th:href="@{/member/newMember}">Add new member</a>
 			<a th:href="@{/fillin}">Fill in</a>
 			
 			<a th:href="@{/book/allBooks}">All books</a>
 			<a th:href="@{/book/newBook}">Add new book</a>
+			<a th:href="@{/fillinbook}">Fill in</a>
+			
 			
 			<a	onclick="document.getElementById('id02').style.display='block'"
 				class="w3-bar-item w3-button w3-mobile w3-right">Session</a> 
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<i class="fa fa-bars"></i></a>
 		</div>
+		
+		
 
 		<script>
 			function myFunction() {

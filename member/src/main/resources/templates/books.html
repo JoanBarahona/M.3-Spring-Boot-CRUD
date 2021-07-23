@@ -36,21 +36,28 @@
 <body>
 
 	<div layout:fragment="content">
+	
+		<div class="w3-container w3-margin">
+			<p>book table</p>
+			<input type="text" id="myInput" onkeyup="myFunction()"
+				placeholder="Search for anything.." title="Type in a name">
+		</div>
 
-		<table class="w3-table-all w3-card-4 w3-padding-64 w3-margin"
+		<table id="myTable" 
+				class="w3-table-all w3-card-4 w3-padding-64 w3-margin"
 			style="width: 80%">
 
 			<tr class="w3-black w3-hover-teal">
 				<td>id</td>
 				<td>Author</td>
-				<td>date</td>
+				<td>Title</td>
 				<td>value</td>
 			</tr>
 			<tr th:each="book:${booksListfromControllerAndDB}">
 			
 				<td th:text="${book.id}"></td>
 				<td th:text="${book.author}"></td>
-				<td th:text="${#dates.format(book.date,'yyyy-MM-dd')}"></td>				
+				<td th:text="${book.title}"></td>				
 				<td th:text="${book.value}"></td>
 				
 				<td><a th:href="@{deleteBook(id=${book.id})}"

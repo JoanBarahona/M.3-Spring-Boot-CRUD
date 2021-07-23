@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -102,6 +101,8 @@ public class BookController {
 				 bookFound.get().setAuthor(book.getAuthor());
 			if (book.getTitle() != null)
 				 bookFound.get().setTitle(book.getTitle());
+			if (book.getValue() != 0)
+				 bookFound.get().setValue(book.getValue());
 			
 			
 			
